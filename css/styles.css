@@ -1,9 +1,12 @@
 :root {
   --accent-color: #1abc9c;
+  --button-color: #4ec6ab;
   --grey-color: #515151;
   --black-color: #000000;
   --white-color: #ffffff;
   --grey-2-color: #555252;
+  --grey-3-block: #323232;
+  --grey-4-price: #8c8c8c;
   --font-1: "Roboto", sans-serif;
   --font-2: "Open Sans", sans-serif;
 }
@@ -18,14 +21,16 @@ html {
 
 body {
   margin: 0;
+  font-family: var(--font-1);
 }
 
 .link {
   display: block;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: var(--font-2);
+  font-family: inherit;
   font-weight: bolder;
+  font-size: 14px;
   color: var(--black-color);
 }
 
@@ -35,7 +40,7 @@ body {
 }
 
 .logo {
-  font-family: var(--font-1);
+  font-family: inherit;
 }
 
 .page-header {
@@ -100,17 +105,100 @@ img {
   display: block;
   height: auto;
   max-width: 100%;
+  border-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.list-item {
+.positions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .item {
-  width: calc(270px - 22.5px);
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 0;
+  flex-basis: calc(100% / 4 - 22.5px);
+  margin-bottom: 30px;
+}
+.item:not(:nth-child(4n)) {
   margin-right: 30px;
 }
-.item:nth-child(4n) {
-  margin-right: 0px;
+.item:nth-last-child(-n + 4) {
+  margin-bottom: 0;
+}
+
+.cotent {
+  display: flex;
+}
+
+.name {
+  font-family: inherit;
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--white-color);
+  text-transform: uppercase;
+  background-color: var(--grey-3-block);
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+  padding-top: 10px;
+  height: 40px;
+  width: 200px;
+}
+.price {
+  font-family: inherit;
+  font-weight: 900;
+  font-size: 18px;
+  height: 40px;
+  width: 55px;
+  margin: 0;
+  color: var(--white-color);
+  background-color: var(--grey-4-price);
+  padding: 10px;
+}
+.section {
+  text-decoration: none;
+}
+
+.h-text {
+  color: var(--grey-2-color);
+  font-family: var(--font-2);
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 13px;
+}
+.text {
+  color: var(--grey-2-color);
+  font-family: var(--font-2);
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 29px;
+  margin-bottom: 40px;
+}
+.blog {
+  width: 350px;
+  margin-right: 30px;
+}
+.blog:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+.button {
+  background-color: var(--button-color);
+  font-family: var(--font-2);
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  text-decoration: none;
+  color: var(--white-color);
+  padding: 15px 40px;
+  border-radius: 3px;
+}
+.button:hover,
+.button:focus {
+  color: var(--accent-color);
 }
