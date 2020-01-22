@@ -78,6 +78,11 @@ body {
   text-transform: uppercase;
   color: var(--grey-2-color);
   margin-right: auto;
+  font-weight: 900;
+  font-size: 30px;
+}
+b {
+  color: var(--accent-color);
 }
 
 /*:first-letter {
@@ -99,6 +104,9 @@ h2 {
   font-family: var(--font-1);
   text-align: center;
   text-transform: uppercase;
+  font-weight: 900;
+  font-size: 48px;
+  margin: 100px 0;
 }
 
 img {
@@ -131,7 +139,7 @@ img {
   margin-bottom: 0;
 }
 
-.cotent {
+.content {
   display: flex;
 }
 
@@ -201,4 +209,7 @@ img {
 .button:hover,
 .button:focus {
   color: var(--accent-color);
+}
+main {
+  margin-bottom: 30px;
 }
