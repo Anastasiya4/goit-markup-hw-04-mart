@@ -1,6 +1,7 @@
 :root {
   --accent-color: #1abc9c;
   --button-color: #4ec6ab;
+  --hover-color: #7fd9c7;
   --grey-color: #515151;
   --black-color: #000000;
   --white-color: #ffffff;
@@ -67,7 +68,7 @@ body {
 }
 
 .nav-bar {
-  width: 500px;
+  min-width: 500px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -100,6 +101,9 @@ font-family: "Open Sans";
 */
 
 /* main part*/
+section {
+  padding: 100px 0;
+}
 h2 {
   color: var(--grey-color);
   font-family: var(--font-1);
@@ -107,7 +111,10 @@ h2 {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 48px;
-  margin: 100px 0;
+}
+
+a {
+  display: block;
 }
 
 img {
@@ -140,6 +147,13 @@ img {
   margin-bottom: 0;
 }
 
+.item:hover .name {
+  background-color: var(--accent-color);
+}
+.item:hover .price {
+  background-color: var(--hover-color);
+}
+
 .content {
   display: flex;
 }
@@ -169,7 +183,7 @@ img {
   background-color: var(--grey-4-price);
   padding: 10px;
 }
-.section {
+.link-2 {
   text-decoration: none;
 }
 /*section:hover,
@@ -199,19 +213,20 @@ img {
   margin-right: 30px;
 }
 
-.button {
+.link-3 {
   background-color: var(--button-color);
   font-family: var(--font-2);
   font-size: 16px;
   font-weight: 300;
+  width: 160px;
   text-align: center;
   text-decoration: none;
   color: var(--white-color);
   padding: 15px 40px;
   border-radius: 3px;
 }
-.button:hover,
-.button:focus {
+.link-3:hover,
+.link-3:focus {
   color: var(--accent-color);
 }
 main {
