@@ -45,6 +45,10 @@ body {
   font-family: inherit;
 }
 
+.mart{
+  margin: 0;
+}
+
 .page-header {
   min-height: 110px;
 }
@@ -104,13 +108,14 @@ font-family: "Open Sans";
 section {
   padding: 100px 0;
 }
-h2 {
+.title {
   color: var(--grey-color);
   font-family: var(--font-1);
   text-align: center;
   text-transform: uppercase;
   font-weight: 900;
   font-size: 48px;
+  margin: 0;
 }
 
 a {
@@ -139,6 +144,7 @@ img {
   flex-grow: 0;
   flex-basis: calc(100% / 4 - 22.5px);
   margin-bottom: 30px;
+  background-color: var(--img-color);
 }
 .item:not(:nth-child(4n)) {
   margin-right: 30px;
@@ -196,14 +202,12 @@ img {
   font-family: var(--font-2);
   font-weight: 600;
   font-size: 18px;
-  margin-top: 13px;
 }
 .text {
   color: var(--grey-2-color);
   font-family: var(--font-2);
   font-weight: 400;
   font-size: 14px;
-  margin-top: 29px;
   margin-bottom: 40px;
 }
 .blog {
